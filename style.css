@@ -300,17 +300,6 @@ button {
   margin-left: 0px;
 }
 
-@media screen and (max-width: 900px) {
-  .carousel img {
-    width: calc(100% / 2);
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .carousel img {
-    width: 100%;
-  }
-}
 
 /* Background Container */
 .background-container {
@@ -485,6 +474,7 @@ ul {
   padding-left: 0;
 }
 
+/* Responsible for Edgeble, products,company, contact texts */
 .ft-title {
   color: #252121;
   font-family: "Merriweather", serif;
@@ -507,12 +497,20 @@ ul {
   padding: 1.25rem 1.875rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
-
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .ft-main-item {
   padding: 1.25rem;
   min-width: 12.5rem;
+}
+
+.stay-updated {
+  text-align: center;
 }
 
 /* Newsletter Form */
@@ -732,5 +730,28 @@ input[type="submit"] {
   .square {
     width: 30%;
     box-sizing: border-box;
+  }
+}
+
+
+/* This is experimental need to check if it works */
+@media screen and (max-width: 800px) {
+  .carousel img {
+    width: calc(100% / 2);
+  }
+  .carousel img {
+    width: 100%;
+  }
+  .ft-main {
+    flex-direction: column;
+    align-items: center; /* Center align items */
+  }
+
+  .ft-main-item {
+    margin-bottom: 20px; /* Add spacing between items */
+  }
+
+  .ft-main-item:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last item */
   }
 }
