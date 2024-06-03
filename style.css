@@ -574,11 +574,6 @@ input[type="submit"] {
 .ft-legal-list li:nth-last-child(2) {
   flex: 1;
 }
-/* Add left margin to sections */
-.heading, .heading1, .cards, .tabs, .container5, .wrapper, .platform, .background-container, .ft-main, .ft-legal {
-  margin-left: 20px; /* Adjust this value to your preference */
-  margin-right: 20px; /* Optional: Add right margin for symmetry */
-}
 
 /* Large Screen Styles */
 @media screen and (min-width: 2560px) {
