@@ -224,9 +224,30 @@ button {
   cursor: pointer;
 }
 
-.tabs button:hover {
-  background-color: rgb(16, 16, 70);
+.tabs button:hover{
+  background-color: #007bff;
   transition: all 0.3s ease 0s;
+}
+.tabs .btn-secondary {
+  border: 2px solid #cccccc; /* Standard border for all */
+  color: #000000; /* Standard text color for all */
+  padding: 10px 20px; /* Padding for better sizing */
+  background-color: transparent; /* Transparent background for outline effect */
+}
+
+
+.btn-secondary:hover, .tabs .btn-secondary:focus {
+  background-color: #007bff; /* Light grey background on hover */
+  color: white; /* Black text on hover */
+  outline: none !important; /* Remove the default focus style */
+  border-color: transparent !important; /* Remove the default border color */
+}
+
+/* Active or selected button styles (optional) */
+.btn-secondary.active {
+  background-color: #0056b3;
+  outline: none;
+  color: black;
 }
 
 /* Wrapper for Carousel */
@@ -303,7 +324,7 @@ button {
 
 /* Background Container */
 .background-container {
-  background-image: url(https://www.se-coastalgroup.org.uk/wp-content/gallery/images/diggers-sunk-seasalter.jpg);
+  background-image: url('https://www.se-coastalgroup.org.uk/wp-content/gallery/images/diggers-sunk-seasalter.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -312,8 +333,9 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+  height: 50vh; /* Ensuring it takes the full view height, adjust as needed */
+  width: 100vw; /* Ensuring it spans full view width */
 }
-
 .background-overlay {
   position: absolute;
   left: 0;
@@ -333,15 +355,17 @@ button {
 .line-heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 110%;
+  justify-content: space-between; /* Kept as is or adjusted to 'center' if you want everything centered */
+  width: 100%; /* Changed from 110% to 100% */
 }
 
 .line-heading-left {
-  text-align: left;
+  text-align: left; /* or 'center' based on your preference */
   margin: 0;
   padding: 0;
+  flex: 1; /* Allows this element to grow and use available space */
 }
+
 
 .line-heading-left h2 {
   color: #fff;
@@ -508,11 +532,9 @@ ul {
   padding: 1.25rem;
   min-width: 12.5rem;
 }
-
 .stay-updated {
   text-align: center;
 }
-
 /* Newsletter Form */
 form {
   display: flex;
@@ -581,8 +603,9 @@ input[type="submit"] {
   }
   
   .video-container {
-    width: 51%;
+    width: 100%;
     margin: 50px auto 0;
+    padding-left: 1.5rem;
   }
 
   .wrapper {
@@ -623,8 +646,9 @@ input[type="submit"] {
   }
 
   button.quickcard {
-    margin-left: -30px;
-  }
+    margin-left: 0; /* Removing negative margin */
+    padding: 10px 20px; /* Ensuring sufficient padding for better touch */
+}
 
   .ft-legal {
     width: 50%;
@@ -668,9 +692,9 @@ input[type="submit"] {
   }
 
   .video {
-    width: 107%;
+    width: 100%;
     height: auto;
-    margin-left: -40px;
+    padding-left: 3rem;
   }
 
   .wrapper i {
@@ -732,7 +756,6 @@ input[type="submit"] {
     box-sizing: border-box;
   }
 }
-
 
 /* This is experimental need to check if it works */
 @media screen and (max-width: 800px) {
