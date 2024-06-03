@@ -254,6 +254,7 @@ button {
 .wrapper {
   display: flex;
   padding: 0 35px;
+  padding-top: 50px;
   min-height: 50vh;
   align-items: center;
   justify-content: center;
@@ -594,6 +595,18 @@ input[type="submit"] {
 .ft-legal-list li:nth-last-child(2) {
   flex: 1;
 }
+  
+.video-container {
+  width: 100%;
+  margin: 50px auto 0;
+  padding-left: 1.5rem;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  padding-left: 3rem;
+}
 
 /* Large Screen Styles */
 @media screen and (min-width: 2560px) {
@@ -601,12 +614,7 @@ input[type="submit"] {
     width: 57%;
     margin: 0 auto;
   }
-  
-  .video-container {
-    width: 100%;
-    margin: 50px auto 0;
-    padding-left: 1.5rem;
-  }
+
 
   .wrapper {
     width: 52%;
@@ -689,12 +697,6 @@ input[type="submit"] {
   }
   .heading, .heading1 {
     padding-left: 0px;
-  }
-
-  .video {
-    width: 100%;
-    height: auto;
-    padding-left: 3rem;
   }
 
   .wrapper i {
