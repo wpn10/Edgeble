@@ -761,6 +761,20 @@ input[type="submit"] {
 
 /* This is experimental need to check if it works */
 @media screen and (max-width: 800px) {
+  .cards {
+    flex-wrap: wrap; /* Wrap the cards */
+    justify-content: center; /* Center align the cards */
+    flex-direction: column; /* Stack the cards vertically */
+  }
+  .cards, .container5 {
+    padding: 0 10px; /* Ensure there's some padding */
+}
+
+.card, .square {
+    width: 100%; /* Take full width */
+    margin: 10px 0; /* Adjust margins for vertical spacing */
+}
+
   .carousel img {
     width: calc(100% / 2);
   }
