@@ -595,17 +595,17 @@ input[type="submit"] {
 .ft-legal-list li:nth-last-child(2) {
   flex: 1;
 }
-  
+
 .video-container {
   width: 100%;
   margin: 50px auto 0;
-  padding-left: 1.5rem;
+  padding: 0 3rem; /* Apply padding uniformly on both sides for consistency */
+  box-sizing: border-box; /* Ensures padding is included within the width */
 }
 
 .video {
   width: 100%;
-  height: auto;
-  padding-left: 3rem;
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Large Screen Styles */
@@ -758,9 +758,19 @@ input[type="submit"] {
     box-sizing: border-box;
   }
 }
-
 /* This is experimental need to check if it works */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
+  
+button.mobile {
+  display: none; /* Hide the button by default */
+}
+  .btn-primary {
+    padding: 6px 15px; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    display: block; /* Block display to fill the available width appropriately */
+    width: auto; /* Adjust width to content size */
+    text-align: center; /* Center the text inside the button */
+}
   .cards {
     flex-wrap: wrap; /* Wrap the cards */
     justify-content: center; /* Center align the cards */
@@ -781,16 +791,22 @@ input[type="submit"] {
   .carousel img {
     width: 100%;
   }
-  .ft-main {
-    flex-direction: column;
-    align-items: center; /* Center align items */
-  }
+  footer, .ft-main, .ft-legal {
+    flex-direction: column; /* Stack elements vertically */
+}
 
-  .ft-main-item {
-    margin-bottom: 20px; /* Add spacing between items */
-  }
+.ft-main-item, .ft-social-list li {
+    width: 100%; /* Full width for better accessibility */
+    text-align: center; /* Center align the text */
+    margin-bottom: 10px;
+}
+
 
   .ft-main-item:last-child {
     margin-bottom: 0; /* Remove bottom margin for the last item */
   }
+  .ft-title, .fy-main-header {
+    text-align: center; /* Ensure titles are also centered */
+}
+  
 }
